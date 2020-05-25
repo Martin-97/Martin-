@@ -1,0 +1,16 @@
+
+The purpose of the assignment was to predict the outcome of the “classe” variable.
+<br>
+I have started by uploading the R libraries that I would need during my analysis in order to answer the question.
+<br>
+Then I loaded the dataset browsing my computer with a read.csv command. As usual, the training dataset is split in 2 to create a Training set (70% of the data) for the modelling process and a Test set (with the remaining 30%) for the validations. The testing dataset will never be changed and will only be used at the end.
+<br>
+Both new datasets have 160 variables. I proceed to the cleaning of some meaningless data. First, I remove the variables which have plenty of NA. Then, the Near Zero variance variables are also removed.
+<br>
+A correlation among variables is analysed before proceeding to the modelling procedures.
+<br>
+We obtain then a graph where the darker the cells’ colour, the higher the correlated variables. We could also have done a PCA (Principal Components Analysis) but as the correlations are quite few, this step won’t change the result significantly and thus I will not do it.
+<br>
+Three methods could be applied to model the regressions. The methods are: Random Forests, Decision Tree and Generalized Boosted Model. For the assignment I only decided to perform the two first ones.
+<br>
+Cross Validation has been used as a method for the trainControl function with 3 folds used (see random forest programming).
